@@ -9,6 +9,8 @@ public class turtleTurtle : MonoBehaviour
     //IF A LEVEL EDITOR IS ADDED IN POST THIS MAY NEED TO BE CHANGED
     [SerializeField]
     turtleSpace currentSpace;
+    [SerializeField]
+    turtleSpace startSpace;
     /// <summary>
     /// 0 is up, 1 is left, 2 is down, 3 is right
     /// </summary>
@@ -37,7 +39,11 @@ public class turtleTurtle : MonoBehaviour
         else { rotation--; }
         rotation = modulo(rotation, 4);
     }
-
+    public void returnToStart()
+    {
+        setCurrentSpace(startSpace);
+        transform.position = startSpace.transform.position;
+    }
     int modulo(int x, int m)
     {
         return (x % m + m) % m;

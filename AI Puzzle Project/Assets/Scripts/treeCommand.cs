@@ -5,5 +5,5 @@ using UnityEngine;
 public class treeCommand : MonoBehaviour
 {
     [SerializeField]
-    int treeCommandNumber;
+    public int treeCommandNumber;
 }

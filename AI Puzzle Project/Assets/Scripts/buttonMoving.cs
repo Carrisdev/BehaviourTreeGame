@@ -21,7 +21,6 @@ public class buttonMoving : MonoBehaviour
         {
             Vector2 newPosition = new Vector2(-2.3f, -11.5f);
             transform.position = camera.GetComponent<Camera>().ScreenToWorldPoint(Input.mousePosition);
-            Debug.Log(transform.position);
             for(int i = 0; i < xPositions.Length; i++)
             {
                 if(Mathf.Abs(transform.position.x - xPositions[i]) < 0.225)

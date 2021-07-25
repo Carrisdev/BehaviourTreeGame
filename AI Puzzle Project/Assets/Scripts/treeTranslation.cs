@@ -13,8 +13,8 @@ public class treeTranslation : MonoBehaviour
     [SerializeField]
     turtleCommandList turtleManager;
     [SerializeField]
-    turtleTurtle turtle;
-    int iteration;
+    public turtleTurtle turtle;
+    public int iteration;
     private void Start()
     {
         int[] treeTESTING;
@@ -22,7 +22,7 @@ public class treeTranslation : MonoBehaviour
         treeTESTING[0] = 0;
         treeTESTING[1] = 2;
         iteration = 0;
-        StartCoroutine(runThroughTree(treeTESTING));
+        //StartCoroutine(runThroughTree(treeTESTING));
     }
     public void searchTurtleFunctions(int functionNum)
     {
@@ -67,13 +67,13 @@ public class treeTranslation : MonoBehaviour
                 break;
         }
     }
-    IEnumerator runThroughTree(int[] numericalTree)
+    public IEnumerator runThroughTree(List<int> numericalTree)
     {
         while(true)
         {
             searchTurtleFunctions(numericalTree[iteration]);
             iteration++;
-            iteration = (iteration % numericalTree.Length + numericalTree.Length) % numericalTree.Length;
+            iteration = (iteration % numericalTree.Count + numericalTree.Count) % numericalTree.Count;
             yield return new WaitForSeconds(0.5f);
         }
         /* this will infinitely run the tree loop. eventually I will add an end condition. I will
