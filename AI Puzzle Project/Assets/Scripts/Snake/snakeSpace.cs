@@ -53,4 +53,12 @@ public class snakeSpace : MonoBehaviour
         }
         return spaceRight;
     }
+    public void setBlocked(bool x)
+    {
+        blocked = x;
+    }
+    public bool getBlocked()
+    {
+        return blocked;
+    }
 }

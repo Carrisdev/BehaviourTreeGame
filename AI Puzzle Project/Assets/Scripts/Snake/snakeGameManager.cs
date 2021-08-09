@@ -10,4 +10,20 @@ public class snakeGameManager : MonoBehaviour
     snakeSnake snake;
     [SerializeField]
     snakeCommands commandSnake;
+    private void Update()
+    {
+        //temp for testing
+        if(Input.GetKeyDown(KeyCode.W))
+        {
+            commandSnake.move(false, snake);
+        }
+        if(Input.GetKeyDown(KeyCode.A))
+        {
+            commandSnake.rotate(false, snake);
+        }
+        if(Input.GetKeyDown(KeyCode.D))
+        {
+            commandSnake.rotate(true, snake);
+        }
+    }
 }

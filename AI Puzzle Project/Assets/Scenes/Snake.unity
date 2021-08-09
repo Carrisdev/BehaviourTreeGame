@@ -154,7 +154,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 884113020}
   spaceRight: {fileID: 1337694971}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &39260488
 Transform:
   m_ObjectHideFlags: 0
@@ -203,7 +202,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 572221638}
   spaceRight: {fileID: 1292152792}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &61891406
 Transform:
   m_ObjectHideFlags: 0
@@ -252,7 +250,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1040896588}
   spaceRight: {fileID: 1669875717}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &82256154
 Transform:
   m_ObjectHideFlags: 0
@@ -301,7 +298,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1577296889}
   spaceRight: {fileID: 492766634}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &87184197
 Transform:
   m_ObjectHideFlags: 0
@@ -350,7 +346,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1577453696}
   spaceRight: {fileID: 223835317}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &120492119
 Transform:
   m_ObjectHideFlags: 0
@@ -399,7 +394,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 2107221255}
   spaceRight: {fileID: 1040896588}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &141222381
 Transform:
   m_ObjectHideFlags: 0
@@ -448,7 +442,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1709006458}
   spaceRight: {fileID: 904891326}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &160039477
 Transform:
   m_ObjectHideFlags: 0
@@ -497,7 +490,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 2049583475}
   spaceRight: {fileID: 946476946}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &174672471
 Transform:
   m_ObjectHideFlags: 0
@@ -546,7 +538,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 897068810}
   spaceRight: {fileID: 2107221255}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &190697428
 Transform:
   m_ObjectHideFlags: 0
@@ -595,7 +586,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 223835317}
   spaceRight: {fileID: 923461294}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &199942136
 Transform:
   m_ObjectHideFlags: 0
@@ -644,7 +634,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 120492118}
   spaceRight: {fileID: 199942135}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &223835318
 Transform:
   m_ObjectHideFlags: 0
@@ -693,7 +682,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1088531337}
   spaceRight: {fileID: 1161468288}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &317279080
 Transform:
   m_ObjectHideFlags: 0
@@ -742,7 +730,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1344797372}
   spaceRight: {fileID: 1281865560}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &342830212
 Transform:
   m_ObjectHideFlags: 0
@@ -872,7 +859,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 862097858}
   spaceRight: {fileID: 0}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &368438790
 Transform:
   m_ObjectHideFlags: 0
@@ -1003,7 +989,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1292152792}
   spaceRight: {fileID: 1045410987}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &421522802
 Transform:
   m_ObjectHideFlags: 0
@@ -1052,7 +1037,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1508205189}
   spaceRight: {fileID: 0}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &446870081
 Transform:
   m_ObjectHideFlags: 0
@@ -1101,7 +1085,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 87184196}
   spaceRight: {fileID: 1649157840}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &492766635
 Transform:
   m_ObjectHideFlags: 0
@@ -1150,7 +1133,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1649157840}
   spaceRight: {fileID: 1690141416}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &494239211
 Transform:
   m_ObjectHideFlags: 0
@@ -1356,7 +1338,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 701671921}
   spaceRight: {fileID: 0}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &541363813
 Transform:
   m_ObjectHideFlags: 0
@@ -1405,7 +1386,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 0}
   spaceRight: {fileID: 1226192325}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &570749546
 Transform:
   m_ObjectHideFlags: 0
@@ -1454,7 +1434,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1449605604}
   spaceRight: {fileID: 61891405}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &572221639
 Transform:
   m_ObjectHideFlags: 0
@@ -1503,7 +1482,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1630243998}
   spaceRight: {fileID: 1553965399}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &605369530
 Transform:
   m_ObjectHideFlags: 0
@@ -1552,7 +1530,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1117224671}
   spaceRight: {fileID: 771326825}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &607810735
 Transform:
   m_ObjectHideFlags: 0
@@ -1601,7 +1578,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 985377518}
   spaceRight: {fileID: 923601036}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &612270622
 Transform:
   m_ObjectHideFlags: 0
@@ -1790,7 +1766,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 680257321}
   spaceRight: {fileID: 1709006458}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &661997966
 Transform:
   m_ObjectHideFlags: 0
@@ -1839,7 +1814,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 946476946}
   spaceRight: {fileID: 661997965}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &680257322
 Transform:
   m_ObjectHideFlags: 0
@@ -1853,6 +1827,101 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1073180691}
   m_RootOrder: 51
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &685133315
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 685133318}
+  - component: {fileID: 685133317}
+  - component: {fileID: 685133316}
+  m_Layer: 0
+  m_Name: food
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &685133316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685133315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22f72f07d361a4588b06205dcee178b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grid: {fileID: 1073180690}
+  currentSpace: {fileID: 0}
+--- !u!212 &685133317
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685133315}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 55baff631e7694fd3b5a94c7ae41f0e0, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 8.4, y: 8.59}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &685133318
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685133315}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.35, y: 2.3, z: 0}
+  m_LocalScale: {x: 0.076975405, y: 0.076975405, z: 0.076975405}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &701370613
 GameObject:
@@ -1888,7 +1957,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1733948233}
   spaceRight: {fileID: 897068810}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &701370615
 Transform:
   m_ObjectHideFlags: 0
@@ -1937,7 +2005,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1161384221}
   spaceRight: {fileID: 541363812}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &701671922
 Transform:
   m_ObjectHideFlags: 0
@@ -1986,7 +2053,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1235042145}
   spaceRight: {fileID: 902939423}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &704977240
 Transform:
   m_ObjectHideFlags: 0
@@ -2035,7 +2101,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1442136102}
   spaceRight: {fileID: 1577453696}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &712942459
 Transform:
   m_ObjectHideFlags: 0
@@ -2084,7 +2149,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1101772110}
   spaceRight: {fileID: 1344797372}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &722299133
 Transform:
   m_ObjectHideFlags: 0
@@ -2133,7 +2197,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1604755328}
   spaceRight: {fileID: 0}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &730345544
 Transform:
   m_ObjectHideFlags: 0
@@ -2269,7 +2332,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 975465841}
   spaceRight: {fileID: 1260765070}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &737188187
 Transform:
   m_ObjectHideFlags: 0
@@ -2458,7 +2520,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 607810734}
   spaceRight: {fileID: 1497835868}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &771326826
 Transform:
   m_ObjectHideFlags: 0
@@ -2507,7 +2568,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1690141416}
   spaceRight: {fileID: 368438789}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &862097859
 Transform:
   m_ObjectHideFlags: 0
@@ -2556,7 +2616,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1088309498}
   spaceRight: {fileID: 902939423}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &865592987
 Transform:
   m_ObjectHideFlags: 0
@@ -2605,7 +2664,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1497078985}
   spaceRight: {fileID: 39260487}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &884113021
 Transform:
   m_ObjectHideFlags: 0
@@ -2654,7 +2712,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1497835868}
   spaceRight: {fileID: 1703147722}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &893470372
 Transform:
   m_ObjectHideFlags: 0
@@ -2703,7 +2760,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 701370614}
   spaceRight: {fileID: 190697427}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &897068811
 Transform:
   m_ObjectHideFlags: 0
@@ -2752,7 +2808,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 704977239}
   spaceRight: {fileID: 865592986}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &902939424
 Transform:
   m_ObjectHideFlags: 0
@@ -2801,7 +2856,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 160039476}
   spaceRight: {fileID: 0}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &904891327
 Transform:
   m_ObjectHideFlags: 0
@@ -2850,7 +2904,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1161468288}
   spaceRight: {fileID: 1037656873}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &911985072
 Transform:
   m_ObjectHideFlags: 0
@@ -2913,7 +2966,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 199942135}
   spaceRight: {fileID: 0}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!1 &923601035
 GameObject:
   m_ObjectHideFlags: 0
@@ -2948,7 +3000,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 612270621}
   spaceRight: {fileID: 0}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &923601037
 Transform:
   m_ObjectHideFlags: 0
@@ -2997,7 +3048,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 174672470}
   spaceRight: {fileID: 680257321}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &946476947
 Transform:
   m_ObjectHideFlags: 0
@@ -3112,7 +3162,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1187753161}
   spaceRight: {fileID: 737188186}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &975465842
 Transform:
   m_ObjectHideFlags: 0
@@ -3161,7 +3210,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1037656873}
   spaceRight: {fileID: 612270621}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &985377519
 Transform:
   m_ObjectHideFlags: 0
@@ -3361,7 +3409,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 911985071}
   spaceRight: {fileID: 985377518}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1037656874
 Transform:
   m_ObjectHideFlags: 0
@@ -3410,7 +3457,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 141222380}
   spaceRight: {fileID: 82256153}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1040896589
 Transform:
   m_ObjectHideFlags: 0
@@ -3459,7 +3505,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 421522801}
   spaceRight: {fileID: 1604755328}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1045410988
 Transform:
   m_ObjectHideFlags: 0
@@ -3638,7 +3683,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 865592986}
   spaceRight: {fileID: 0}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1088309499
 Transform:
   m_ObjectHideFlags: 0
@@ -3687,7 +3731,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1820633387}
   spaceRight: {fileID: 317279079}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1088531338
 Transform:
   m_ObjectHideFlags: 0
@@ -3736,7 +3779,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1226192325}
   spaceRight: {fileID: 722299132}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1101772111
 Transform:
   m_ObjectHideFlags: 0
@@ -3785,7 +3827,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 0}
   spaceRight: {fileID: 607810734}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1117224672
 Transform:
   m_ObjectHideFlags: 0
@@ -3834,7 +3875,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 0}
   spaceRight: {fileID: 1820633387}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1137332225
 Transform:
   m_ObjectHideFlags: 0
@@ -3883,7 +3923,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1281865560}
   spaceRight: {fileID: 701671921}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1161384222
 Transform:
   m_ObjectHideFlags: 0
@@ -3932,7 +3971,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 317279079}
   spaceRight: {fileID: 911985071}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1161468289
 Transform:
   m_ObjectHideFlags: 0
@@ -3981,7 +4019,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 0}
   spaceRight: {fileID: 975465841}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1187753162
 Transform:
   m_ObjectHideFlags: 0
@@ -4030,7 +4067,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1309493298}
   spaceRight: {fileID: 1442136102}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1189498641
 Transform:
   m_ObjectHideFlags: 0
@@ -4159,7 +4195,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 570749545}
   spaceRight: {fileID: 1101772110}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1226192326
 Transform:
   m_ObjectHideFlags: 0
@@ -4208,7 +4243,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1545185604}
   spaceRight: {fileID: 704977239}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1235042146
 Transform:
   m_ObjectHideFlags: 0
@@ -4257,7 +4291,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 737188186}
   spaceRight: {fileID: 1545185604}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1260765071
 Transform:
   m_ObjectHideFlags: 0
@@ -4306,7 +4339,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 342830211}
   spaceRight: {fileID: 1161384221}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1281865561
 Transform:
   m_ObjectHideFlags: 0
@@ -4355,7 +4387,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 61891405}
   spaceRight: {fileID: 421522801}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1292152793
 Transform:
   m_ObjectHideFlags: 0
@@ -4404,7 +4435,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1502204474}
   spaceRight: {fileID: 1189498640}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1309493299
 Transform:
   m_ObjectHideFlags: 0
@@ -4453,7 +4483,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1337694971}
   spaceRight: {fileID: 2061610067}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1317678299
 Transform:
   m_ObjectHideFlags: 0
@@ -4502,7 +4531,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 39260487}
   spaceRight: {fileID: 1317678298}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1337694972
 Transform:
   m_ObjectHideFlags: 0
@@ -4551,7 +4579,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 722299132}
   spaceRight: {fileID: 342830211}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1344797373
 Transform:
   m_ObjectHideFlags: 0
@@ -4699,7 +4726,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1743074828}
   spaceRight: {fileID: 1449605604}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1439642881
 Transform:
   m_ObjectHideFlags: 0
@@ -4748,7 +4774,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1189498640}
   spaceRight: {fileID: 712942458}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1442136103
 Transform:
   m_ObjectHideFlags: 0
@@ -4797,7 +4822,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1439642880}
   spaceRight: {fileID: 572221638}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1449605605
 Transform:
   m_ObjectHideFlags: 0
@@ -4929,7 +4953,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1904806032}
   spaceRight: {fileID: 884113020}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1497078986
 Transform:
   m_ObjectHideFlags: 0
@@ -4978,7 +5001,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 771326825}
   spaceRight: {fileID: 893470371}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1497835869
 Transform:
   m_ObjectHideFlags: 0
@@ -5027,7 +5049,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 0}
   spaceRight: {fileID: 1309493298}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1502204475
 Transform:
   m_ObjectHideFlags: 0
@@ -5076,7 +5097,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1599788926}
   spaceRight: {fileID: 446870080}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1508205190
 Transform:
   m_ObjectHideFlags: 0
@@ -5125,7 +5145,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1703147722}
   spaceRight: {fileID: 1599788926}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1510879725
 Transform:
   m_ObjectHideFlags: 0
@@ -5281,6 +5300,7 @@ GameObject:
   - component: {fileID: 1523306276}
   - component: {fileID: 1523306275}
   - component: {fileID: 1523306277}
+  - component: {fileID: 1523306278}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -5327,8 +5347,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74ead217a3f824506923c3ebcc7a7b1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snake: {fileID: 0}
-  commandSnake: {fileID: 0}
+  snake: {fileID: 1944235106}
+  commandSnake: {fileID: 1523306278}
+--- !u!114 &1523306278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1523306274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a623ee10cb4644c9b8f2dd2512aa6cde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1523306279
 Transform:
   m_ObjectHideFlags: 0
@@ -5407,7 +5439,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1260765070}
   spaceRight: {fileID: 1235042145}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1545185605
 Transform:
   m_ObjectHideFlags: 0
@@ -5456,7 +5487,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1631577341}
   spaceRight: {fileID: 1577296889}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1546917807
 Transform:
   m_ObjectHideFlags: 0
@@ -5505,7 +5535,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 605369529}
   spaceRight: {fileID: 0}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1553965400
 Transform:
   m_ObjectHideFlags: 0
@@ -5554,7 +5583,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1546917806}
   spaceRight: {fileID: 87184196}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1577296890
 Transform:
   m_ObjectHideFlags: 0
@@ -5603,7 +5631,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 712942458}
   spaceRight: {fileID: 120492118}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1577453697
 Transform:
   m_ObjectHideFlags: 0
@@ -5652,7 +5679,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1510879724}
   spaceRight: {fileID: 1508205189}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1599788927
 Transform:
   m_ObjectHideFlags: 0
@@ -5701,7 +5727,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1045410987}
   spaceRight: {fileID: 730345543}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1604755329
 Transform:
   m_ObjectHideFlags: 0
@@ -5750,7 +5775,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 2061610067}
   spaceRight: {fileID: 605369529}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1630243999
 Transform:
   m_ObjectHideFlags: 0
@@ -5799,7 +5823,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 0}
   spaceRight: {fileID: 1546917806}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1631577342
 Transform:
   m_ObjectHideFlags: 0
@@ -5848,7 +5871,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 492766634}
   spaceRight: {fileID: 494239210}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1649157841
 Transform:
   m_ObjectHideFlags: 0
@@ -5897,7 +5919,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 82256153}
   spaceRight: {fileID: 0}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1669875718
 Transform:
   m_ObjectHideFlags: 0
@@ -5946,7 +5967,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 494239210}
   spaceRight: {fileID: 862097858}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1690141417
 Transform:
   m_ObjectHideFlags: 0
@@ -5995,7 +6015,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 893470371}
   spaceRight: {fileID: 1510879724}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1703147723
 Transform:
   m_ObjectHideFlags: 0
@@ -6044,7 +6063,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 661997965}
   spaceRight: {fileID: 160039476}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1709006459
 Transform:
   m_ObjectHideFlags: 0
@@ -6093,7 +6111,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1966604527}
   spaceRight: {fileID: 701370614}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1733948234
 Transform:
   m_ObjectHideFlags: 0
@@ -6142,7 +6159,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 0}
   spaceRight: {fileID: 1439642880}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1743074829
 Transform:
   m_ObjectHideFlags: 0
@@ -6421,7 +6437,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1137332224}
   spaceRight: {fileID: 1088531337}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1820633388
 Transform:
   m_ObjectHideFlags: 0
@@ -6446,6 +6461,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1854725499}
   - component: {fileID: 1854725498}
+  - component: {fileID: 1854725500}
   m_Layer: 0
   m_Name: snakeTail
   m_TagString: Untagged
@@ -6516,6 +6532,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1854725500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854725497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97bad10ef259b428baf762eb98593b01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentSpace: {fileID: 0}
 --- !u!1 &1897595526
 GameObject:
   m_ObjectHideFlags: 0
@@ -6550,7 +6579,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1947665599}
   spaceRight: {fileID: 2049583475}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1897595528
 Transform:
   m_ObjectHideFlags: 0
@@ -6599,7 +6627,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 0}
   spaceRight: {fileID: 1497078985}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1904806033
 Transform:
   m_ObjectHideFlags: 0
@@ -6709,6 +6736,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentSpace: {fileID: 492766634}
   startSpace: {fileID: 492766634}
+  snakeBody: {fileID: 8414247202750641442, guid: af4e7e268a843433c86071fa6bd777f4,
+    type: 3}
+  snakeTail: {fileID: 1854725497}
+  snakeFood: {fileID: 685133316}
   bodyPieces: []
 --- !u!1 &1947665598
 GameObject:
@@ -6744,7 +6775,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 0}
   spaceRight: {fileID: 1897595527}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1947665600
 Transform:
   m_ObjectHideFlags: 0
@@ -6880,7 +6910,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 0}
   spaceRight: {fileID: 1733948233}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &1966604528
 Transform:
   m_ObjectHideFlags: 0
@@ -6929,7 +6958,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1897595527}
   spaceRight: {fileID: 174672470}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &2049583476
 Transform:
   m_ObjectHideFlags: 0
@@ -6978,7 +7006,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 1317678298}
   spaceRight: {fileID: 1630243998}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &2061610068
 Transform:
   m_ObjectHideFlags: 0
@@ -7027,7 +7054,6 @@ MonoBehaviour:
   spaceLeft: {fileID: 190697427}
   spaceRight: {fileID: 141222380}
   blocked: 0
-  tailPiece: {fileID: 0}
 --- !u!4 &2107221256
 Transform:
   m_ObjectHideFlags: 0
