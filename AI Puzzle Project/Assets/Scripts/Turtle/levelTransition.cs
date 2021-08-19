@@ -9,22 +9,30 @@ public class levelTransition : MonoBehaviour
     turtleSpace currentSpace;
     [SerializeField]
     turtleTurtle turtle;
+    [SerializeField]
+    turtleLevelOpener LevelOpener;
     private void Update()
     {
         if(turtle.getCurrentSpace() == currentSpace)
         {
             if(SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Level 1"))
             {
-                SceneManager.LoadScene("Level 2");
+                StartCoroutine(transitionLevel("Level 2"));
             }
             if(SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Level 2"))
             {
-                SceneManager.LoadScene("Level 3");
+                StartCoroutine(transitionLevel("Level 3"));
             }
             if(SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Level 3"))
             {
-                SceneManager.LoadScene("Title Screen");
+                StartCoroutine(transitionLevel("Title Screen"));
             }
         }
+    }
+    IEnumerator transitionLevel(string levelName)
+    {
+        LevelOpener.gameObject.SetActive(true);
+        yield return StartCoroutine(LevelOpener.endLevel());
+        SceneManager.LoadScene(levelName);
     }
 }

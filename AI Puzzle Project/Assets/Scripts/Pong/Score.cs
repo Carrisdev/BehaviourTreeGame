@@ -21,5 +21,10 @@ public class Score : MonoBehaviour
         }
         scoreText.text = "Score\nHuman: " + humanScore + "\nAI: " + AIScore;
     }
-
+    public void resetScore()
+    {
+        humanScore = 0;
+        AIScore = 0;
+        scoreText.text = "Score\nHuman: " + humanScore + "\nAI: " + AIScore;
+    }
 }

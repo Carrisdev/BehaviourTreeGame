@@ -15,36 +15,15 @@ public class snakeCommands : MonoBehaviour
         switch (snake.getRotation())
         {
             case 0:
-                if (!snake.getCurrentSpace().getUp()) 
-                {
-                    //this should kill the game as the snake is trying to move somewhere blocked, aka losing
-                    //currently only reloading the scene but it should do something more later
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-                }
                 moveUp(infinite, snake);
                 break;
             case 1:
-                if (!snake.getCurrentSpace().getRight())
-                {
-                    //currently only reloading the scene but it should do something more later
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-                }
                 moveRight(infinite, snake);
                 break;
             case 2:
-                if (!snake.getCurrentSpace().getDown())
-                {
-                    //currently only reloading the scene but it should do something more later
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-                }
                 moveDown(infinite, snake);
                 break;
             case 3:
-                if (!snake.getCurrentSpace().getLeft())
-                {
-                    //currently only reloading the scene but it should do something more later
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-                }
                 moveLeft(infinite, snake);
                 break;
             default:
@@ -60,12 +39,14 @@ public class snakeCommands : MonoBehaviour
     /// <param name="infinite">If set to <c>true</c> the piece will keep moving up until it hits a wall.</param>
     public void moveUp(bool infinite, snakeSnake snake)
     {
-        //USED FOR INFINITE MOVES THIS DOESN'T RETURN FOR NORMAL MOVES
-        //checks if the infinite move is over. if it is, end recursion
         if (snake.getCurrentSpace().getUp() == null)
         {
+            //game over
+            Debug.Log("game over");
             return;
         }
+        //change the rotation just incase the player uses the move up node
+        snake.rotation = 0;
         snake.rebuildSnake(snake.getCurrentSpace().getUp(), snake.getCurrentSpace());
         snake.setCurrentSpace(snake.getCurrentSpace().getUp());
         snake.getCurrentSpace().setBlocked(true);
@@ -81,12 +62,13 @@ public class snakeCommands : MonoBehaviour
     /// <param name="infinite">If set to <c>true</c> the piece will keep moving down until it hits a wall.</param>
     public void moveDown(bool infinite, snakeSnake snake)
     {
-        //USED FOR INFINITE MOVES THIS DOESN'T RETURN FOR NORMAL MOVES
-        //checks if the infinite move is over. if it is, end recursion
         if (snake.getCurrentSpace().getDown() == null)
         {
+            //game over
+            Debug.Log("game over");
             return;
         }
+        snake.rotation = 2;
         snake.rebuildSnake(snake.getCurrentSpace().getDown(), snake.getCurrentSpace());
         snake.setCurrentSpace(snake.getCurrentSpace().getDown());
         snake.getCurrentSpace().setBlocked(true);
@@ -102,12 +84,13 @@ public class snakeCommands : MonoBehaviour
     /// <param name="infinite">If set to <c>true</c> the piece will keep moving left until it hits a wall.</param>
     public void moveLeft(bool infinite, snakeSnake snake)
     {
-        //USED FOR INFINITE MOVES THIS DOESN'T RETURN FOR NORMAL MOVES
-        //checks if the infinite move is over. if it is, end recursion
         if (snake.getCurrentSpace().getLeft() == null)
         {
+            //game over
+            Debug.Log("game over");
             return;
         }
+        snake.rotation = 3;
         snake.rebuildSnake(snake.getCurrentSpace().getLeft(), snake.getCurrentSpace());
         snake.setCurrentSpace(snake.getCurrentSpace().getLeft());
         snake.getCurrentSpace().setBlocked(true);
@@ -123,13 +106,14 @@ public class snakeCommands : MonoBehaviour
     /// <param name="infinite">If set to <c>true</c> the piece will keep moving right until it hits a wall.</param>
     public void moveRight(bool infinite, snakeSnake snake)
     {
-        //USED FOR INFINITE MOVES THIS DOESN'T RETURN FOR NORMAL MOVES
-        //checks if the infinite move is over. if it is, end recursion
         if (snake.getCurrentSpace().getRight() == null)
         {
+            //game over
+            Debug.Log("game over");
             return;
         }
         //move the piece and change the current position variable
+        snake.rotation = 1;
         snake.rebuildSnake(snake.getCurrentSpace().getRight(), snake.getCurrentSpace());
         snake.setCurrentSpace(snake.getCurrentSpace().getRight());
         snake.getCurrentSpace().setBlocked(true);
@@ -205,67 +189,113 @@ public class snakeCommands : MonoBehaviour
     /// <summary>
     /// checks whether the food is above or below the snake
     /// </summary>
-    /// <returns>0 is the food is above, 1 is the food is below, 2 is the food is on the same row</returns>
+    /// <returns>0 if the food is above, 1 if the food is on the same row, 2 if the food is below</returns>
     /// <param name="snake">the snake</param>
     public int checkFoodVertical(snakeSnake snake)
     {
         float foodPosition = snake.snakeFood.transform.position.y;
         float snakePosition = snake.transform.position.y;
-        float difference = foodPosition - snakePosition;
-        if(difference > 0.5f)
-        {
-            return 0;
-        }
+        float difference = snakePosition - foodPosition;
+        Debug.Log(difference);
         if(difference < -0.5f)
         {
-            return 1;
+            Debug.Log("FOOD IS ABOVE");
+            return 0;
         }
-        return 2;
+        if(difference > 0.5f)
+        {
+            Debug.Log("FOOD IS BELOW");
+            return 2;
+        }
+        return 1;
     }
     /// <summary>
     /// checks whether the food is to the left or right of the snake
     /// </summary>
-    /// <returns>0 if the food is to the right, 1 if the food is to the left, 2 is the food is on the same column</returns>
+    /// <returns>0 if the food is to the right, 1 is the food is on the same column, 2 if the food is to the left</returns>
     /// <param name="snake">Snake.</param>
     public int checkFoodHorizontal(snakeSnake snake)
     {
         float foodPosition = snake.snakeFood.transform.position.x;
         float snakePosition = snake.transform.position.x;
-        float difference = foodPosition - snakePosition;
+        float difference = snakePosition - foodPosition;
+        Debug.Log(difference);
         if (difference > 0.5f)
         {
+            Debug.Log("FOOD IS LEFT");
             return 0;
         }
         if (difference < -0.5f)
         {
-            return 1;
+            Debug.Log("FOOD IS RIGHT");
+            return 2;
         }
-        return 2;
+        return 1;
     }
 
     public int checkSnakeHorizontal(snakeSnake snake)
     {
         string spaceName = snake.getCurrentSpace().name;
-        int horizontalSpace = parseSpaceName1(spaceName);
+        int horizontalSpace = parseSpaceName2(spaceName);
         return horizontalSpace;
     }
+
     public int checkSnakeVertical(snakeSnake snake)
     {
         string spaceName = snake.getCurrentSpace().name;
-        int verticalSpace = parseSpaceName2(spaceName);
+        int verticalSpace = parseSpaceName1(spaceName);
         return verticalSpace;
     }
+
     public int checkFoodExactHorizontal(snakeSnake snake)
     {
         string spaceName = snake.snakeFood.currentSpace.name;
-        int horizontalSpace = parseSpaceName1(spaceName);
+        int horizontalSpace = parseSpaceName2(spaceName);
         return horizontalSpace;
     }
+
     public int checkFoodExactVertical(snakeSnake snake)
     {
         string spaceName = snake.snakeFood.currentSpace.name;
-        int verticalSpace = parseSpaceName2(spaceName);
+        int verticalSpace = parseSpaceName1(spaceName);
         return verticalSpace;
+    }
+
+    public bool checkFoodRow(snakeSnake snake, int row)
+    {
+        if(checkFoodExactHorizontal(snake) == row)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public bool checkFoodColumn(snakeSnake snake, int column)
+    {
+
+        if (checkFoodExactVertical(snake) == column)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public bool checkSnakeRow(snakeSnake snake, int row)
+    {
+        if (checkSnakeHorizontal(snake) == row)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public bool checkSnakeColumn(snakeSnake snake, int column)
+    {
+        if (checkSnakeVertical(snake) == column)
+        {
+            return true;
+        }
+        return false;
     }
 
     int parseSpaceName1(string spaceName)
@@ -284,6 +314,7 @@ public class snakeCommands : MonoBehaviour
         }
         return 0;
     }
+
     int parseSpaceName2(string spaceName)
     {
         string number = "";

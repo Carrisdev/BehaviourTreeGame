@@ -12,15 +12,20 @@ public class snakeSnake : MonoBehaviour
     [SerializeField]
     snakeSpace startSpace;
     [SerializeField]
+    snakeSpace tailStartSpace;
+    [SerializeField]
     GameObject snakeBody;
     [SerializeField]
     GameObject snakeTail;
     [SerializeField]
     public snakeFood snakeFood;
+    [SerializeField]
+    snakeScore scoreText;
+    int foodScore = 0;
     /// <summary>
-    /// 0 is up, 1 is left, 2 is down, 3 is right
+    /// 0 is up, 1 is right, 2 is down, 3 is left
     /// </summary>
-    int rotation = 0;
+    public int rotation = 0;
     public List<GameObject> bodyPieces;
     // Start is called before the first frame update
     void Start()
@@ -49,8 +54,24 @@ public class snakeSnake : MonoBehaviour
     }
     public void returnToStart()
     {
+        for(int i = 0; i < bodyPieces.Count; i++)
+        {
+            bodyPieces[i].GetComponent<snakeBody>().currentSpace.setBlocked(false);
+            Destroy(bodyPieces[i]);
+        }
+        snakeTail.GetComponent<snakeBody>().currentSpace.setBlocked(false);
+        currentSpace.setBlocked(false);
         setCurrentSpace(startSpace);
-        transform.position = startSpace.transform.position;
+        rotation = 0;
+        bodyPieces = new List<GameObject>();
+        rebuildSnake(startSpace, tailStartSpace);
+        foodScore = 0;
+
+    }
+    public void resetScore()
+    {
+        foodScore = 0;
+        scoreText.updateScore3(foodScore);
     }
     int modulo(int x, int m)
     {
@@ -58,12 +79,16 @@ public class snakeSnake : MonoBehaviour
     }
     public void rebuildSnake(snakeSpace newSpace, snakeSpace oldSpace)
     {
-        if(bodyPieces.Count == 0)
+        if (bodyPieces.Count == 0)
         {
             gameObject.transform.position = newSpace.transform.position;
-            if(newSpace == snakeFood.currentSpace)
+            transform.rotation = Quaternion.identity;
+            transform.Rotate(0, 0, -rotation * 90);
+            if (newSpace == snakeFood.currentSpace)
             {
                 snakeFood.reshuffle();
+                foodScore++;
+                scoreText.updateScore3(foodScore);
                 //need to assign from a variable so it doesn't become a child of the old space
                 Vector3 x = oldSpace.transform.position;
                 GameObject newBody = Instantiate(snakeBody, x, Quaternion.identity);
@@ -72,6 +97,8 @@ public class snakeSnake : MonoBehaviour
                 return;
             }
             snakeTail.transform.position = oldSpace.transform.position;
+            snakeTail.transform.rotation = Quaternion.identity;
+            snakeTail.transform.Rotate(0, 0, rotation*-90);
             snakeTail.GetComponent<snakeBody>().currentSpace.setBlocked(false);
             snakeTail.GetComponent<snakeBody>().currentSpace = oldSpace;
             return;
@@ -83,6 +110,9 @@ public class snakeSnake : MonoBehaviour
             snakeTail.transform.position = bodyPieces[0].transform.position;
             snakeTail.GetComponent<snakeBody>().currentSpace.setBlocked(false);
             snakeTail.GetComponent<snakeBody>().currentSpace = bodyPieces[0].GetComponent<snakeBody>().currentSpace;
+            //reset the tail back to a 0, 0, 0 rotation, then rotate the snaketail as the previous body was
+            snakeTail.transform.rotation = Quaternion.identity;
+            snakeTail.transform.Rotate(0, 0, bodyPieces[0].GetComponent<snakeBody>().direction * 90);
             //save a reference to the object before removing it, so it can be destroyed
             GameObject deleteThis = bodyPieces[0];
             //remove the oldest body position
@@ -93,6 +123,8 @@ public class snakeSnake : MonoBehaviour
         else
         {
             snakeFood.reshuffle();
+            foodScore++;
+            scoreText.updateScore3(foodScore);
         }
         //cant have the same name as the variables above. only one will ever be used tho thanks to that return
         Vector3 y = oldSpace.transform.position;
@@ -100,5 +132,7 @@ public class snakeSnake : MonoBehaviour
         bodyPieces.Add(newBody2);
         newBody2.GetComponent<snakeBody>().currentSpace = oldSpace;
         gameObject.transform.position = newSpace.transform.position;
+        transform.rotation = Quaternion.identity;
+        transform.Rotate(0, 0, -rotation * 90);
     }
 }

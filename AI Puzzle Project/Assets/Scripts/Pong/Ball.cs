@@ -13,7 +13,6 @@ public class Ball : MonoBehaviour
     {
         startingPosition = transform.position;
         ballRigidbody = gameObject.GetComponent<Rigidbody2D>();
-        ballRigidbody.velocity = new Vector2(-3, 0);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -48,7 +47,10 @@ public class Ball : MonoBehaviour
     IEnumerator pauseVelocity()
     {
         yield return new WaitForSeconds(1);
-        ballRigidbody.velocity = new Vector2(-3, 0);
+        if(FindObjectOfType<HumanPaddle>().started)
+        {
+            ballRigidbody.velocity = new Vector2(-3, 0);
+        }
         yield return 0;
     }
 }

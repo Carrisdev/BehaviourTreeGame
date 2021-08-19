@@ -135,8 +135,22 @@ public class turtleCommandList : MonoBehaviour
     /// <returns><c>true</c> if the space above the turtle is free, <c>false</c> otherwise.</returns>
     public bool checkUp(turtleTurtle turtle)
     {
-        turtleSpace checkedMove;
-        checkedMove = turtle.getCurrentSpace().getUp();
+        turtleSpace checkedMove = null;
+        switch(turtle.getRotation())
+        {
+            case 0:
+                checkedMove = turtle.getCurrentSpace().getUp();
+                break;
+            case 1:
+                checkedMove = turtle.getCurrentSpace().getRight();
+                break;
+            case 2:
+                checkedMove = turtle.getCurrentSpace().getDown();
+                break;
+            case 3:
+                checkedMove = turtle.getCurrentSpace().getLeft();
+                break;
+        }
         if (checkedMove == null)
         {
             return false;
@@ -149,8 +163,22 @@ public class turtleCommandList : MonoBehaviour
     /// <returns><c>true</c> if the space below the turtle is free, <c>false</c> otherwise.</returns>
     public bool checkDown(turtleTurtle turtle)
     {
-        turtleSpace checkedMove;
-        checkedMove = turtle.getCurrentSpace().getDown();
+        turtleSpace checkedMove = null;
+        switch (turtle.getRotation())
+        {
+            case 0:
+                checkedMove = turtle.getCurrentSpace().getDown();
+                break;
+            case 1:
+                checkedMove = turtle.getCurrentSpace().getLeft();
+                break;
+            case 2:
+                checkedMove = turtle.getCurrentSpace().getUp();
+                break;
+            case 3:
+                checkedMove = turtle.getCurrentSpace().getRight();
+                break;
+        }
         if (checkedMove == null)
         {
             return false;
@@ -163,8 +191,23 @@ public class turtleCommandList : MonoBehaviour
     /// <returns><c>true</c> if the space to the left of the turtle is free, <c>false</c> otherwise.</returns>
     public bool checkLeft(turtleTurtle turtle)
     {
-        turtleSpace checkedMove;
-        checkedMove = turtle.getCurrentSpace().getLeft();
+        turtleSpace checkedMove = null;
+        switch (turtle.getRotation())
+        {
+            case 0:
+                checkedMove = turtle.getCurrentSpace().getLeft();
+
+                break;
+            case 1:
+                checkedMove = turtle.getCurrentSpace().getUp();
+                break;
+            case 2:
+                checkedMove = turtle.getCurrentSpace().getRight();
+                break;
+            case 3:
+                checkedMove = turtle.getCurrentSpace().getDown();
+                break;
+        }
         if (checkedMove == null)
         {
             return false;
@@ -177,14 +220,26 @@ public class turtleCommandList : MonoBehaviour
     /// <returns><c>true</c> if the space to the right of the turtle is free, <c>false</c> otherwise.</returns>
     public bool checkRight(turtleTurtle turtle)
     {
-        turtleSpace checkedMove;
-        checkedMove = turtle.getCurrentSpace().getRight();
+        turtleSpace checkedMove = null;
+        switch (turtle.getRotation())
+        {
+            case 0:
+                checkedMove = turtle.getCurrentSpace().getRight();
+                break;
+            case 1:
+                checkedMove = turtle.getCurrentSpace().getDown();
+                break;
+            case 2:
+                checkedMove = turtle.getCurrentSpace().getLeft();
+                break;
+            case 3:
+                checkedMove = turtle.getCurrentSpace().getUp();
+                break;
+        }
         if (checkedMove == null)
         {
             return false;
         }
         return true;
     }
-    /*TODO: so I dunno if having 4 separate functions is a good idea, but i mean it's better than having to check
-     * the rotation for every move and copy pasting the code in one function imo, so meh. */
 }

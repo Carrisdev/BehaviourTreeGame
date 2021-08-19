@@ -21,23 +21,31 @@ public class titleText : MonoBehaviour
                 SceneManager.LoadScene("Snake");
                 break;
             case "Play":
-                if(movingCamera)
+                if(Camera.main.transform.position.x != 635 || Camera.main.transform.position.y != 397)
                 {
-                    break;
+                    return;
                 }
                 StartCoroutine(moveGameSelect(movingCamera));
                 movingCamera = true;
                 break;
             case "Options":
-                if (movingCamera)
+                if (Camera.main.transform.position.x != 635 || Camera.main.transform.position.y != 397)
                 {
-                    break;
+                    return;
                 }
                 StartCoroutine(moveOptionSelect(movingCamera));
                 movingCamera = true;
                 break;
+            case "Credits":
+                if (Camera.main.transform.position.x != 635 || Camera.main.transform.position.y != 397)
+                {
+                    return;
+                }
+                StartCoroutine(moveCredits(movingCamera));
+                movingCamera = true;
+                break;
             case "Back":
-                if (movingCamera)
+                if (Camera.main.transform.position.x != 935 || Camera.main.transform.position.y != 397)
                 {
                     break;
                 }
@@ -45,11 +53,19 @@ public class titleText : MonoBehaviour
                 movingCamera = true;
                 break;
             case "Back2":
-                if (movingCamera)
+                if (Camera.main.transform.position.x != 323 || Camera.main.transform.position.y != 397)
                 {
                     break;
                 }
                 StartCoroutine(moveBack2(movingCamera));
+                movingCamera = true;
+                break;
+            case "Back3":
+                if (Camera.main.transform.position.x != 635 || Camera.main.transform.position.y != 178)
+                {
+                    break;
+                }
+                StartCoroutine(moveBack3(movingCamera));
                 movingCamera = true;
                 break;
             case "Exit":
@@ -76,7 +92,6 @@ public class titleText : MonoBehaviour
             }
             yield return new WaitForSeconds(0.01f);
         }
-        movingCamera = false;
     }
     public IEnumerator moveOptionSelect(bool movingCamera)
     {
@@ -95,7 +110,24 @@ public class titleText : MonoBehaviour
             }
             yield return new WaitForSeconds(0.01f);
         }
-        movingCamera = false;
+    }
+    public IEnumerator moveCredits(bool movingCamera)
+    {
+        float newY = 397;
+        while (newY > 178)
+        {
+            newY = Camera.main.transform.position.y - speed;
+            if (newY < 178)
+            {
+                newY = 178;
+            }
+            Camera.main.transform.position = new Vector3(635, newY, -897.83f);
+            if (newY >= 178)
+            {
+                yield return 0;
+            }
+            yield return new WaitForSeconds(0.01f);
+        }
     }
     public IEnumerator moveBack1(bool movingCamera)
     {
@@ -114,7 +146,6 @@ public class titleText : MonoBehaviour
             }
             yield return new WaitForSeconds(0.01f);
         }
-        movingCamera = false;
     }
     public IEnumerator moveBack2(bool movingCamera)
     {
@@ -133,6 +164,23 @@ public class titleText : MonoBehaviour
             }
             yield return new WaitForSeconds(0.01f);
         }
-        movingCamera = false;
+    }
+    public IEnumerator moveBack3(bool movingCamera)
+    {
+        float newY = 178;
+        while (newY < 397)
+        {
+            newY = Camera.main.transform.position.y + speed;
+            if (newY > 397)
+            {
+                newY = 397;
+            }
+            Camera.main.transform.position = new Vector3(635, newY, -897.83f);
+            if (newY >= 397)
+            {
+                yield return 0;
+            }
+            yield return new WaitForSeconds(0.01f);
+        }
     }
 }
