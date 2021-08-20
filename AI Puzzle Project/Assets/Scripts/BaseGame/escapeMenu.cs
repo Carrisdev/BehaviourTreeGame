@@ -45,6 +45,8 @@ public class escapeMenu : MonoBehaviour
             {
                 if (Input.GetMouseButtonDown(0))
                 {
+                    //this is mainly to make sure the timescale is set back to 1
+                    closePause();
                     SceneManager.LoadScene("Title Screen");
                 }
             }

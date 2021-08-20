@@ -1322,5 +1322,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Level 1.unity
   - Assets/Scenes/Level 2.unity
   - Assets/Scenes/Level 3.unity
-  playerPath: /Users/olivermorris/Documents/GitHub/Tetris AI/AI Puzzle Project/Brick
-    By Brick/AI Puzzle Project.exe
+  playerPath: /Users/olivermorris/Desktop/WinBuild/Brick By Brick/Brick By Brick.exe
