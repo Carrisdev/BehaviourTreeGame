@@ -23,10 +23,12 @@ public class inputBoundaries : MonoBehaviour
         {
             return;
         }
+        //if the user inputs a value higher than the max, set the user generated value to the max
         if (int.Parse(input.text) > max)
         {
             input.text = max.ToString();
         }
+        //if hte user inputs a value lower than the min, set the user generated value to the min
         if (int.Parse(input.text) < min)
         {
             input.text = min.ToString();

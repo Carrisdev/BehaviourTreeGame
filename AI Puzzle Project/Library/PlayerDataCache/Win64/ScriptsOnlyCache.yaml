@@ -1322,4 +1322,5 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Level 1.unity
   - Assets/Scenes/Level 2.unity
   - Assets/Scenes/Level 3.unity
-  playerPath: /Users/olivermorris/Desktop/WinBuild/Brick By Brick/Brick By Brick.exe
+  playerPath: /Users/olivermorris/Desktop/Brick By Brick/Windows/Brick By Brick/Brick
+    By Brick.exe

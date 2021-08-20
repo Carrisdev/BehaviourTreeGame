@@ -6,6 +6,8 @@ public class buttonMoving : MonoBehaviour
 {
     bool set;
     GameObject camera;
+    //all the possible X positions and Y positions. While this may seem impractical, all of this is hard coded in the scene
+    //so there's no reason to spend time making a script to systematically do this
     float[] xPositions = {-7.2f, -6.75f, -6.3f, -5.85f, -5.4f, -4.95f, -4.5f, -4.05f, -3.6f, -3.15f, -2.7f,
     -2.25f, -1.8f, -1.35f, -0.9f, -0.45f, 0f, 0.45f, 0.9f, 1.35f, 1.8f, 2.25f, 2.7f, 3.15f, 3.6f, 4.05f, 4.5f,
     4.95f, 5.4f, 5.85f, 6.3f, 6.75f, 7.2f};
@@ -14,16 +16,21 @@ public class buttonMoving : MonoBehaviour
     -4.75f, -5.2f, -5.65f, -6.1f, -6.55f, -7f, -7.45f, -7.9f};
     private void Start()
     {
+        //when a button is created, put it in front of the background
         set = false;
         camera = GameObject.Find("Grid Camera");
         gameObject.GetComponent<Renderer>().sortingOrder = 1;
     }
     private void Update()
     {
+        //if the button isn't set
         if(!set)
         {
+            //if the button can't find a valid position to move to, shove it well away from the rest of the grid
             Vector2 newPosition = new Vector2(-20f, -11.5f);
+            //move to the mouse position
             transform.position = camera.GetComponent<Camera>().ScreenToWorldPoint(Input.mousePosition);
+            //if there's a valid x position close enough to it, set the new position x to that
             for (int i = 0; i < xPositions.Length; i++)
             {
                 if(Mathf.Abs(transform.localPosition.x - xPositions[i]) < 0.225)
@@ -32,6 +39,7 @@ public class buttonMoving : MonoBehaviour
                     break;
                 }
             }
+            //if there's a valid y position close enough to it, set the new position y to that
             for(int i = 0; i < yPositions.Length; i++)
             {
                 if(Mathf.Abs((transform.localPosition.y - 0.225f) - yPositions[i]) < 0.225)
@@ -40,8 +48,10 @@ public class buttonMoving : MonoBehaviour
                     break;
                 }
             }
+            //move to the new x and y position. if there wasn't been a valid position chosen, it will just move well away from the grid
             transform.localPosition = new Vector3(newPosition.x, newPosition.y, 1);
         }
+        //if the player releases the mouse, stop moving the node
         if(Input.GetMouseButtonUp(0))
         {
             StopAllCoroutines();
@@ -64,6 +74,7 @@ public class buttonMoving : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    //add a small delay to stop clicks from causing the node to move
     IEnumerator slightDelay()
     {
         yield return new WaitForSeconds(0.1f);

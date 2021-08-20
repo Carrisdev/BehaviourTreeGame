@@ -21,6 +21,7 @@ public class turtleSpace : MonoBehaviour
     that the board variables aren't accidentally changed for whatever reason*/
     public turtleSpace getUp()
     {
+        //return the space above if it exists
         if(spaceUp == null || spaceUp.blocked)
         {
             return null;
@@ -29,6 +30,7 @@ public class turtleSpace : MonoBehaviour
     }
     public turtleSpace getDown()
     {
+        //return the space below if it exists
         if (spaceDown == null || spaceDown.blocked)
         {
             return null;
@@ -37,6 +39,7 @@ public class turtleSpace : MonoBehaviour
     }
     public turtleSpace getLeft()
     {
+        //return the space to the left if it exists
         if (spaceLeft == null || spaceLeft.blocked)
         {
             return null;
@@ -45,6 +48,7 @@ public class turtleSpace : MonoBehaviour
     }
     public turtleSpace getRight()
     {
+        //return the space to the right if it exists
         if (spaceRight == null || spaceRight.blocked)
         {
             return null;

@@ -12,6 +12,7 @@ public class HumanPaddle : MonoBehaviour
         {
             return;
         }
+        //move the paddle up with W and the paddle down with S
         if (Input.GetKey(KeyCode.W)) {
             transform.position = new Vector3(transform.position.x, transform.position.y + speed);
             if (transform.position.y > 4.15f)

@@ -21,8 +21,7 @@ public class cameraButton : MonoBehaviour
         {
             firstPress = false;
             StopAllCoroutines();
-            //switch camera
-            Debug.Log("second click");
+            //switch active camera
             if(gridActive)
             {
                 gridActive = false;
@@ -41,6 +40,7 @@ public class cameraButton : MonoBehaviour
             StartCoroutine(waitForSecondPress());
         }
     }
+    //double clicks are only valid if they happen within a second of eachother
     IEnumerator waitForSecondPress()
     {
         firstPress = true;

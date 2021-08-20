@@ -11,6 +11,7 @@ public class Score : MonoBehaviour
     Text scoreText;
 
     public void updateScore(bool humanScored) {
+        //check who scored, and update the text as appropriate
         if(humanScored)
         {
             humanScore++;
@@ -23,6 +24,7 @@ public class Score : MonoBehaviour
     }
     public void resetScore()
     {
+        //reset everything back to the start
         humanScore = 0;
         AIScore = 0;
         scoreText.text = "Score\nHuman: " + humanScore + "\nAI: " + AIScore;

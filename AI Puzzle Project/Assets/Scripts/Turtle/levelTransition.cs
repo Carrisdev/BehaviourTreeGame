@@ -14,6 +14,8 @@ public class levelTransition : MonoBehaviour
     bool transitioning = false;
     private void Update()
     {
+        //if the turtle is standing on the right space and the level isn't already transitioning
+        //start transitioning the scene to the next one
         if(turtle.getCurrentSpace() == currentSpace && !transitioning)
         {
             if(SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Level 1"))
@@ -35,6 +37,7 @@ public class levelTransition : MonoBehaviour
     }
     IEnumerator transitionLevel(string levelName)
     {
+        //show the level opener, then wait for the player to close it, then load the next scene
         LevelOpener.gameObject.SetActive(true);
         FindObjectOfType<soundManager>().playClip("levelPassed");
         yield return StartCoroutine(LevelOpener.endLevel());

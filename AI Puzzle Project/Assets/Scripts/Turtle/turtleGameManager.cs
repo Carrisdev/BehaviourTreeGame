@@ -11,4 +11,6 @@ public class turtleGameManager : MonoBehaviour
     [SerializeField]
     turtleCommandList commandTurtle;
 
+    //THIS SCRIPT WAS USED FOR TESTING
+    //THIS WAS WHERE I MANUALLY CONTROLLED THE TURTLE WITH WASD TO TEST THAT MOVE AND ROTATE WORKED
 }

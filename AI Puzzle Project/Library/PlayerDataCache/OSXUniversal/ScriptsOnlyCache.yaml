@@ -1322,4 +1322,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Level 1.unity
   - Assets/Scenes/Level 2.unity
   - Assets/Scenes/Level 3.unity
-  playerPath: /Users/olivermorris/Desktop/MacBuild/Brick By Brick.app
+  playerPath: /Users/olivermorris/Desktop/Brick By Brick/Brick By Brick.app

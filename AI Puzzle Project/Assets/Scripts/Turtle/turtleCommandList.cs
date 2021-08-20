@@ -9,10 +9,8 @@ public class turtleCommandList : MonoBehaviour
     //the base move command
     public bool move(bool infinite, turtleTurtle turtle)
     {
-        //if the move is not possible, just return false entirely.
+        //if the move is not possible, just return false.
         //if the move is possible, start to move the piece in the right direction
-
-        //are switch statements into if statements good coding practice? who knows but it works so ¯\_(ツ)_/¯
         switch (turtle.getRotation())
         {
             case 0:
@@ -44,14 +42,15 @@ public class turtleCommandList : MonoBehaviour
     /// <param name="infinite">If set to <c>true</c> the piece will keep moving up until it hits a wall.</param>
     public void moveUp(bool infinite, turtleTurtle turtle)
     {
-        //USED FOR INFINITE MOVES THIS DOESN'T RETURN FOR NORMAL MOVES
-        //checks if the infinite move is over. if it is, end recursion
+        //checks if the player can move. if they can't, return
         if (turtle.getCurrentSpace().getUp() == null)
         {
             return;
         }
+        //change the position of the turtle, then change the turtle's new currentSpace to the new space.
         turtle.transform.position = turtle.getCurrentSpace().getUp().transform.position;
         turtle.setCurrentSpace(turtle.getCurrentSpace().getUp());
+        //if the move is an infinite move, continue the recursion
         if (infinite)
         {
             moveUp(true, turtle);
@@ -64,14 +63,15 @@ public class turtleCommandList : MonoBehaviour
     /// <param name="infinite">If set to <c>true</c> the piece will keep moving down until it hits a wall.</param>
     public void moveDown(bool infinite, turtleTurtle turtle)
     {
-        //USED FOR INFINITE MOVES THIS DOESN'T RETURN FOR NORMAL MOVES
-        //checks if the infinite move is over. if it is, end recursion
+        //checks if the turtle can move. if it can't, return
         if (turtle.getCurrentSpace().getDown() == null)
         {
             return;
         }
+        //change the position of the turtle, then change the turtle's new currentSpace to the new space.
         turtle.transform.position = turtle.getCurrentSpace().getDown().transform.position;
         turtle.setCurrentSpace(turtle.getCurrentSpace().getDown());
+        //if the move is an infinite move, continue the recursion
         if (infinite)
         {
             moveDown(true, turtle);
@@ -84,14 +84,15 @@ public class turtleCommandList : MonoBehaviour
     /// <param name="infinite">If set to <c>true</c> the piece will keep moving left until it hits a wall.</param>
     public void moveLeft(bool infinite, turtleTurtle turtle)
     {
-        //USED FOR INFINITE MOVES THIS DOESN'T RETURN FOR NORMAL MOVES
-        //checks if the infinite move is over. if it is, end recursion
+        //checks if the turtle can move. if it can't, return
         if (turtle.getCurrentSpace().getLeft() == null)
         {
             return;
         }
+        //change the position of the turtle, then change the turtle's new currentSpace to the new space.
         turtle.transform.position = turtle.getCurrentSpace().getLeft().transform.position;
         turtle.setCurrentSpace(turtle.getCurrentSpace().getLeft());
+        //if the move is an infinite move, continue the recursion
         if (infinite)
         {
             moveLeft(true, turtle);
@@ -104,16 +105,15 @@ public class turtleCommandList : MonoBehaviour
     /// <param name="infinite">If set to <c>true</c> the piece will keep moving right until it hits a wall.</param>
     public void moveRight(bool infinite, turtleTurtle turtle)
     {
-        //USED FOR INFINITE MOVES THIS DOESN'T RETURN FOR NORMAL MOVES
-        //checks if the infinite move is over. if it is, end recursion
+        //checks if the turtle can move. if it can't, return
         if (turtle.getCurrentSpace().getRight() == null)
         {
             return;
         }
-        //move the piece and change the current position variable
+        //change the position of the turtle, then change the turtle's new currentSpace to the new space.
         turtle.transform.position = turtle.getCurrentSpace().getRight().transform.position;
         turtle.setCurrentSpace(turtle.getCurrentSpace().getRight());
-        //if it's an infinte move, and the piece can keep going, continue the recursion loop
+        //if the move is an infinite move, continue the recursion
         if (infinite)
         {
             moveRight(true, turtle);
@@ -136,6 +136,7 @@ public class turtleCommandList : MonoBehaviour
     public bool checkUp(turtleTurtle turtle)
     {
         turtleSpace checkedMove = null;
+        //since this node is affected by rotation, we need to change which space to check dependant on the rotation
         switch(turtle.getRotation())
         {
             case 0:
@@ -151,6 +152,7 @@ public class turtleCommandList : MonoBehaviour
                 checkedMove = turtle.getCurrentSpace().getLeft();
                 break;
         }
+        //return the result
         if (checkedMove == null)
         {
             return false;
@@ -164,6 +166,7 @@ public class turtleCommandList : MonoBehaviour
     public bool checkDown(turtleTurtle turtle)
     {
         turtleSpace checkedMove = null;
+        //since this node is affected by rotation, we need to change which space to check dependant on the rotation
         switch (turtle.getRotation())
         {
             case 0:
@@ -179,6 +182,7 @@ public class turtleCommandList : MonoBehaviour
                 checkedMove = turtle.getCurrentSpace().getRight();
                 break;
         }
+        //return the result
         if (checkedMove == null)
         {
             return false;
@@ -192,6 +196,7 @@ public class turtleCommandList : MonoBehaviour
     public bool checkLeft(turtleTurtle turtle)
     {
         turtleSpace checkedMove = null;
+        //since this node is affected by rotation, we need to change which space to check dependant on the rotation
         switch (turtle.getRotation())
         {
             case 0:
@@ -208,6 +213,7 @@ public class turtleCommandList : MonoBehaviour
                 checkedMove = turtle.getCurrentSpace().getDown();
                 break;
         }
+        //return the result
         if (checkedMove == null)
         {
             return false;
@@ -221,6 +227,7 @@ public class turtleCommandList : MonoBehaviour
     public bool checkRight(turtleTurtle turtle)
     {
         turtleSpace checkedMove = null;
+        //since this node is affected by rotation, we need to change which space to check dependant on the rotation
         switch (turtle.getRotation())
         {
             case 0:
@@ -236,6 +243,7 @@ public class turtleCommandList : MonoBehaviour
                 checkedMove = turtle.getCurrentSpace().getUp();
                 break;
         }
+        //check the result
         if (checkedMove == null)
         {
             return false;

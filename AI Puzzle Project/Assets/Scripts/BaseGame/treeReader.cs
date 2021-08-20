@@ -199,7 +199,7 @@ public class treeReader : MonoBehaviour
             }
             output += ", ";
         }
-        //Debug.Log(output);
+        //update the score if the score needs it
         if(scoreText != null)
         {
             scoreText.updateScore1(instructionLengthScore);
@@ -208,6 +208,7 @@ public class treeReader : MonoBehaviour
     }
     public void stopRead()
     {
+        //stop the tree from reading
         StopAllCoroutines();
         if(scene.name == "Level 1" || scene.name == "Level 2" || scene.name == "Level 3")
         {

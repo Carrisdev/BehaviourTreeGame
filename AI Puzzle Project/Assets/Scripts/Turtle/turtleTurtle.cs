@@ -21,6 +21,7 @@ public class turtleTurtle : MonoBehaviour
         //finds all the possible board positions the turtle could be in
         turtleSpaces = FindObjectsOfType<turtleSpace>();
     }
+    //return the space the turtle is occupying
     public turtleSpace getCurrentSpace()
     {
         return currentSpace;
@@ -35,9 +36,12 @@ public class turtleTurtle : MonoBehaviour
     }
     public void rotate(bool clockwise)
     {
+        //add or remove from rotate dependant on if the turtle is going clockwise or counter clockwise
         if(clockwise) { rotation++; }
         else { rotation--; }
+        //keep rotation between 0 and 3
         rotation = modulo(rotation, 4);
+        //rotate the turtle sprite appropriately
         transform.rotation = Quaternion.identity;
         if(rotation == 1)
         {
@@ -50,11 +54,14 @@ public class turtleTurtle : MonoBehaviour
             transform.Rotate(0, 0, 90);
         }
     }
+    //reset the turtle back to the start point
     public void returnToStart()
     {
         setCurrentSpace(startSpace);
         transform.position = startSpace.transform.position;
+        transform.rotation = Quaternion.identity;
     }
+    //modulo function
     int modulo(int x, int m)
     {
         return (x % m + m) % m;

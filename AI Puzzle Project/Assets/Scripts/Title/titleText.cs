@@ -7,6 +7,7 @@ public class titleText : MonoBehaviour
 {
     public void buttonManager()
     {
+        //check which button is being pressed. Depending on that, either move the camera, load a different scene, or leave the game
         switch (gameObject.name)
         {
             case "Turtle":
@@ -39,6 +40,7 @@ public class titleText : MonoBehaviour
             case "Exit":
                 Application.Quit();
                 break;
+                //if i accidentally add a button that's not assigned, just throw an error.
             default:
                 Debug.Log("button name not assigned to any command. " + gameObject.name);
                 break;

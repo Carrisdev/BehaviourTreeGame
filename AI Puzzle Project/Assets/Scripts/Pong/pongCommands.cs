@@ -41,6 +41,7 @@ public class pongCommands : MonoBehaviour
     }
     public bool checkBallInput(AIPaddle paddle, float input)
     {
+        //change the % value passed in by the player to an actual position
         float positionalInput = input / 99 * 8.3f - 4.15f;
         if(ball.transform.position.y > positionalInput)
         {
@@ -50,12 +51,10 @@ public class pongCommands : MonoBehaviour
     }
     public bool checkBallInputX(AIPaddle paddle, float input)
     {
-        //between -8.08 and 0.38
-        //-4.23 is the middle
+        //change the % value passed in by the player to an actual position
         float positionalInput = input / 99 * 8.46f - 4.23f;
         //need to shift it to the left as 0 is not the middle
         positionalInput -= 3.85f;
-        Debug.Log(positionalInput);
         if(ball.transform.position.x < positionalInput)
         {
             return true;

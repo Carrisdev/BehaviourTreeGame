@@ -16,6 +16,7 @@ public class baseButton : MonoBehaviour
 
     private void OnMouseOver()
     {
+        //if the player is hovering over the button and holding shift, show the assigned help text
         if(Input.GetKey(KeyCode.LeftShift) && transform.position.y > -1.6f)
         {
             gameObject.GetComponent<buttonHelpHover>().show();
@@ -39,6 +40,7 @@ public class baseButton : MonoBehaviour
 
     private void OnMouseDown()
     {
+        //if the object is pressed, create a new node
         if (hovered && transform.position.y > -1.6f)
         {
             GameObject newBox = Instantiate(textObject);

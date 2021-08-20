@@ -12,8 +12,6 @@ public class snakeCommands : MonoBehaviour
     {
         //if the move is not possible, just return false entirely.
         //if the move is possible, start to move the piece in the right direction
-
-        //are switch statements into if statements good coding practice? who knows but it works so ¯\_(ツ)_/¯
         switch (snake.getRotation())
         {
             case 0:
@@ -41,6 +39,7 @@ public class snakeCommands : MonoBehaviour
     /// <param name="infinite">If set to <c>true</c> the piece will keep moving up until it hits a wall.</param>
     public void moveUp(bool infinite, snakeSnake snake)
     {
+        //if the player runs into a wall or themself
         if (snake.getCurrentSpace().getUp() == null)
         {
             //play the death sound effect
@@ -51,15 +50,13 @@ public class snakeCommands : MonoBehaviour
             gameOverText.SetActive(true);
             return;
         }
-        //change the rotation just incase the player uses the move up node
+        //set the rotation
         snake.rotation = 0;
+        //rebuild the snake in the new position
         snake.rebuildSnake(snake.getCurrentSpace().getUp(), snake.getCurrentSpace());
+        //set the snake's currentSpace to the new space
         snake.setCurrentSpace(snake.getCurrentSpace().getUp());
         snake.getCurrentSpace().setBlocked(true);
-        if (infinite)
-        {
-            moveUp(true, snake);
-        }
     }
 
     /// <summary>
@@ -68,6 +65,7 @@ public class snakeCommands : MonoBehaviour
     /// <param name="infinite">If set to <c>true</c> the piece will keep moving down until it hits a wall.</param>
     public void moveDown(bool infinite, snakeSnake snake)
     {
+        //if the player runs into a wall or themself
         if (snake.getCurrentSpace().getDown() == null)
         {
             //play the death sound effect
@@ -78,14 +76,13 @@ public class snakeCommands : MonoBehaviour
             gameOverText.SetActive(true);
             return;
         }
+        //set the rotation
         snake.rotation = 2;
+        //rebuild the snake in the new position
         snake.rebuildSnake(snake.getCurrentSpace().getDown(), snake.getCurrentSpace());
+        //set its new currentSpace
         snake.setCurrentSpace(snake.getCurrentSpace().getDown());
         snake.getCurrentSpace().setBlocked(true);
-        if (infinite)
-        {
-            moveDown(true, snake);
-        }
     }
 
     /// <summary>
@@ -104,14 +101,13 @@ public class snakeCommands : MonoBehaviour
             gameOverText.SetActive(true);
             return;
         }
+        //set the rotation
         snake.rotation = 3;
+        //rebuild the snake
         snake.rebuildSnake(snake.getCurrentSpace().getLeft(), snake.getCurrentSpace());
+        //set its new currentPosition
         snake.setCurrentSpace(snake.getCurrentSpace().getLeft());
         snake.getCurrentSpace().setBlocked(true);
-        if (infinite)
-        {
-            moveLeft(true, snake);
-        }
     }
 
     /// <summary>
@@ -130,16 +126,13 @@ public class snakeCommands : MonoBehaviour
             gameOverText.SetActive(true);
             return;
         }
-        //move the piece and change the current position variable
+        //set the rotation
         snake.rotation = 1;
+        //rebuild the snake
         snake.rebuildSnake(snake.getCurrentSpace().getRight(), snake.getCurrentSpace());
+        //set its new currentPosition
         snake.setCurrentSpace(snake.getCurrentSpace().getRight());
         snake.getCurrentSpace().setBlocked(true);
-        //if it's an infinte move, and the piece can keep going, continue the recursion loop
-        if (infinite)
-        {
-            moveRight(true, snake);
-        }
     }
 
     public void rotate(bool clockwise, snakeSnake snake)
@@ -211,18 +204,18 @@ public class snakeCommands : MonoBehaviour
     /// <param name="snake">the snake</param>
     public int checkFoodVertical(snakeSnake snake)
     {
+        //get the snake and food's Y positions
         float foodPosition = snake.snakeFood.transform.position.y;
         float snakePosition = snake.transform.position.y;
         float difference = snakePosition - foodPosition;
-        Debug.Log(difference);
+        //if the food is above the snake
         if(difference < -0.5f)
         {
-            Debug.Log("FOOD IS ABOVE");
             return 0;
         }
+        //if the food is below the snake
         if(difference > 0.5f)
         {
-            Debug.Log("FOOD IS BELOW");
             return 2;
         }
         return 1;
@@ -234,18 +227,18 @@ public class snakeCommands : MonoBehaviour
     /// <param name="snake">Snake.</param>
     public int checkFoodHorizontal(snakeSnake snake)
     {
+        //get the snake and food's X position
         float foodPosition = snake.snakeFood.transform.position.x;
         float snakePosition = snake.transform.position.x;
         float difference = snakePosition - foodPosition;
-        Debug.Log(difference);
+        //if the food is to the left
         if (difference > 0.5f)
         {
-            Debug.Log("FOOD IS LEFT");
             return 0;
         }
+        //if the food is to the right
         if (difference < -0.5f)
         {
-            Debug.Log("FOOD IS RIGHT");
             return 2;
         }
         return 1;
@@ -253,28 +246,36 @@ public class snakeCommands : MonoBehaviour
 
     public int checkSnakeHorizontal(snakeSnake snake)
     {
+        //get the name of the space the snake is in
         string spaceName = snake.getCurrentSpace().name;
+        //get the 2nd number in it, as that's the horizontal space we want to return
         int horizontalSpace = parseSpaceName2(spaceName);
         return horizontalSpace;
     }
 
     public int checkSnakeVertical(snakeSnake snake)
     {
+        //get the name of the space the snake is in
         string spaceName = snake.getCurrentSpace().name;
+        //get the 1st number in it, as that's the vertical space we want to return
         int verticalSpace = parseSpaceName1(spaceName);
         return verticalSpace;
     }
 
     public int checkFoodExactHorizontal(snakeSnake snake)
     {
+        //get the name of the space the food is in
         string spaceName = snake.snakeFood.currentSpace.name;
+        //get the 2nd number in it, as that's the horizontal space we want to return
         int horizontalSpace = parseSpaceName2(spaceName);
         return horizontalSpace;
     }
 
     public int checkFoodExactVertical(snakeSnake snake)
     {
+        //get the name of the space the snake is in
         string spaceName = snake.snakeFood.currentSpace.name;
+        //get the 1st number in it, as that's the vertical space we want to return
         int verticalSpace = parseSpaceName1(spaceName);
         return verticalSpace;
     }
@@ -321,6 +322,7 @@ public class snakeCommands : MonoBehaviour
         string number = "";
         for(int i = 0; i < spaceName.Length; i++)
         {
+            //reads the string until it sees a comma, then sends that number back as an int
             if(spaceName[i] != ',')
             {
                 number += spaceName[i];
@@ -337,6 +339,7 @@ public class snakeCommands : MonoBehaviour
     {
         string number = "";
         bool x = false;
+        //reads the string once it sees a comma, then sends that back as an int
         for(int i = 0; i < spaceName.Length; i++)
         {
             if(x)
