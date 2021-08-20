@@ -33,7 +33,7 @@ public class cameraGridMove : MonoBehaviour
         if (pullTab.transform.localPosition.x < 350)
         {
             //if the mouse is within the bounds of the node select menu
-            if (Input.mousePosition.x > 1023 && Input.mousePosition.y > 400)
+            if (Input.mousePosition.x > Screen.width*0.7f && Input.mousePosition.y > Screen.height*0.48f)
             {
                 scrollY = scrollMarker.transform.localPosition.y + (Input.mouseScrollDelta.y * -0.4f);
                 if(scrollY < 0)

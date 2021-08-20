@@ -9,6 +9,6 @@ public class cameraGridFollow : MonoBehaviour
 
     private void Update()
     {
-        transform.position = masterCamera.transform.position;
+        transform.position = new Vector3(masterCamera.transform.position.x + 0.5f, masterCamera.transform.position.y, masterCamera.transform.position.z);
     }
 }

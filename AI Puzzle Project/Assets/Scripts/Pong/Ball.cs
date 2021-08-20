@@ -23,6 +23,7 @@ public class Ball : MonoBehaviour
             transform.position = startingPosition;
             ballRigidbody.velocity = new Vector2(0, 0);
             StartCoroutine(pauseVelocity());
+            FindObjectOfType<soundManager>().playClip("point");
         } 
         else if(collision.gameObject.name == "AIScore")
         {
@@ -30,17 +31,19 @@ public class Ball : MonoBehaviour
             transform.position = startingPosition;
             ballRigidbody.velocity = new Vector2(0, 0);
             StartCoroutine(pauseVelocity());
+            FindObjectOfType<soundManager>().playClip("point");
         }
         else if(collision.gameObject.name == "wall" || collision.gameObject.name == "wall2")
         {
             ballRigidbody.velocity = new Vector2(ballRigidbody.velocity.x, -ballRigidbody.velocity.y);
+            FindObjectOfType<soundManager>().playClip("bounce");
         }
         else
         {
             float xVelocity = ballRigidbody.velocity.x;
             float difference = gameObject.transform.position.y - collision.transform.position.y;
-            ballRigidbody.velocity = new Vector2(-xVelocity, difference*5);
-
+            ballRigidbody.velocity = new Vector2(-xVelocity, difference*7);
+            FindObjectOfType<soundManager>().playClip("bounce");
         }
     }
 
@@ -49,7 +52,7 @@ public class Ball : MonoBehaviour
         yield return new WaitForSeconds(1);
         if(FindObjectOfType<HumanPaddle>().started)
         {
-            ballRigidbody.velocity = new Vector2(-3, 0);
+            ballRigidbody.velocity = new Vector2(-5, 0);
         }
         yield return 0;
     }

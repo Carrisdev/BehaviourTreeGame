@@ -38,6 +38,17 @@ public class turtleTurtle : MonoBehaviour
         if(clockwise) { rotation++; }
         else { rotation--; }
         rotation = modulo(rotation, 4);
+        transform.rotation = Quaternion.identity;
+        if(rotation == 1)
+        {
+            transform.Rotate(0, 0, 270);
+        } else if(rotation == 2)
+        {
+            transform.Rotate(0, 0, 180);
+        } else if(rotation == 3)
+        {
+            transform.Rotate(0, 0, 90);
+        }
     }
     public void returnToStart()
     {

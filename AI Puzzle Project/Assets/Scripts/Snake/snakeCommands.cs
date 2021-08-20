@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class snakeCommands : MonoBehaviour
 {
+    [SerializeField]
+    GameObject gameOverText;
     //the base move command
     public bool move(bool infinite, snakeSnake snake)
     {
@@ -41,8 +43,12 @@ public class snakeCommands : MonoBehaviour
     {
         if (snake.getCurrentSpace().getUp() == null)
         {
-            //game over
-            Debug.Log("game over");
+            //play the death sound effect
+            FindObjectOfType<soundManager>().playClip("hit");
+            //stop the tree from running as the game is over until the player resets
+            gameObject.GetComponent<treeTranslation>().paused = true;
+            //display the game over text
+            gameOverText.SetActive(true);
             return;
         }
         //change the rotation just incase the player uses the move up node
@@ -64,8 +70,12 @@ public class snakeCommands : MonoBehaviour
     {
         if (snake.getCurrentSpace().getDown() == null)
         {
-            //game over
-            Debug.Log("game over");
+            //play the death sound effect
+            FindObjectOfType<soundManager>().playClip("hit");
+            //stop the tree from running as the game is over until the player resets
+            gameObject.GetComponent<treeTranslation>().paused = true;
+            //display the game over text
+            gameOverText.SetActive(true);
             return;
         }
         snake.rotation = 2;
@@ -86,8 +96,12 @@ public class snakeCommands : MonoBehaviour
     {
         if (snake.getCurrentSpace().getLeft() == null)
         {
-            //game over
-            Debug.Log("game over");
+            //play the death sound effect
+            FindObjectOfType<soundManager>().playClip("hit");
+            //stop the tree from running as the game is over until the player resets
+            gameObject.GetComponent<treeTranslation>().paused = true;
+            //display the game over text
+            gameOverText.SetActive(true);
             return;
         }
         snake.rotation = 3;
@@ -108,8 +122,12 @@ public class snakeCommands : MonoBehaviour
     {
         if (snake.getCurrentSpace().getRight() == null)
         {
-            //game over
-            Debug.Log("game over");
+            //play the death sound effect
+            FindObjectOfType<soundManager>().playClip("hit");
+            //stop the tree from running as the game is over until the player resets
+            gameObject.GetComponent<treeTranslation>().paused = true;
+            //display the game over text
+            gameOverText.SetActive(true);
             return;
         }
         //move the piece and change the current position variable

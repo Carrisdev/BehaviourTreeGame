@@ -31,8 +31,8 @@ public class escapeMenu : MonoBehaviour
         if(paused)
         {
             //within resume menu
-            if(Input.mousePosition.x > 444 && Input.mousePosition.x < 948 &&
-            Input.mousePosition.y > 384 && Input.mousePosition.y < 477)
+            if(Input.mousePosition.x > Screen.width * 0.29f && Input.mousePosition.x < Screen.width * 0.7f &&
+            Input.mousePosition.y > Screen.height * 0.465f && Input.mousePosition.y < Screen.height * 0.586f)
             {
                 if(Input.GetMouseButtonDown(0))
                 {
@@ -40,8 +40,8 @@ public class escapeMenu : MonoBehaviour
                 }
             }
             //within exit menu
-            if (Input.mousePosition.x > 530 && Input.mousePosition.x < 871 &&
-            Input.mousePosition.y > 222 && Input.mousePosition.y < 304)
+            if (Input.mousePosition.x > Screen.width * 0.36f && Input.mousePosition.x < Screen.width * 0.64f &&
+            Input.mousePosition.y > Screen.height * 0.28f && Input.mousePosition.y < Screen.height * 0.38f)
             {
                 if (Input.GetMouseButtonDown(0))
                 {

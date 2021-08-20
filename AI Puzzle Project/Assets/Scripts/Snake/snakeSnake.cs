@@ -86,6 +86,7 @@ public class snakeSnake : MonoBehaviour
             transform.Rotate(0, 0, -rotation * 90);
             if (newSpace == snakeFood.currentSpace)
             {
+                FindObjectOfType<soundManager>().playClip("pickup");
                 snakeFood.reshuffle();
                 foodScore++;
                 scoreText.updateScore3(foodScore);
